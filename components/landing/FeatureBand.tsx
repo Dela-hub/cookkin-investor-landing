@@ -29,35 +29,38 @@ export default function FeatureBand({
         }`}
       >
         <div className="animate-fade-up">
-          <p className="section-kicker">{eyebrow}</p>
-          <h2 className="max-w-xl font-serif text-[2rem] leading-[1.08] tracking-tight text-slate-900 sm:text-4xl lg:text-[3rem]">
+          <p className="text-[11px] sm:text-xs uppercase tracking-[0.22em] text-gray-400 font-light mb-4">
+            {eyebrow}
+          </p>
+          <h2 className="font-serif text-[2rem] sm:text-4xl lg:text-[3rem] font-medium leading-[1.1] tracking-tight text-gray-900 max-w-xl">
             {title}
           </h2>
-          <p className="mt-4 max-w-xl text-base leading-8 text-slate-600 sm:text-lg">
+          <p className="text-base sm:text-lg text-gray-600 mt-4 max-w-xl leading-relaxed">
             {description}
           </p>
-          <a
-            href={ctaHref}
-            className="mt-6 inline-flex items-center rounded-xl bg-[var(--accent)] px-5 py-2.5 font-semibold text-white transition-colors hover:bg-[var(--accent-strong)]"
+          <button
+            type="button"
+            data-cta={ctaHref}
+            className="inline-flex items-center mt-6 px-5 py-2.5 rounded-lg bg-[#FF2E7A] text-white font-semibold hover:bg-[#e3266d] transition-colors"
           >
             {ctaLabel}
-          </a>
+          </button>
         </div>
 
         <div className="animate-fade-up-delay-1">
-          <div className="rounded-[2rem] border border-slate-200 bg-white p-4 shadow-[0_18px_50px_rgba(15,23,42,0.08)]">
-            <div className="overflow-hidden rounded-[1.4rem] bg-slate-100">
+          <div className="rounded-[2rem] border border-gray-200 bg-white p-4 shadow-sm">
+            <div className="rounded-[1.4rem] overflow-hidden bg-gray-100">
               <Image
                 src={imageSrc}
                 alt={imageAlt}
                 width={900}
                 height={560}
-                className="h-auto w-full object-cover"
+                className="w-full h-auto object-cover"
               />
             </div>
           </div>
         </div>
       </div>
     </section>
-  );
+  )
 }
