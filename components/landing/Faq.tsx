@@ -1,29 +1,34 @@
 const items = [
   {
-    question: "What is Cookkin?",
+    question: "What is CookKin?",
     answer:
-      "Cookkin is a family memory product built around recipes, voice, story, and the emotional context of food.",
+      "CookKin is a private family recipe app where you can preserve voice, video, and stories behind each dish.",
   },
   {
-    question: "Why does this matter beyond recipes?",
+    question: "Is CookKin free?",
     answer:
-      "The product preserves tacit knowledge and family history that are usually lost when a recipe is reduced to ingredients and timings alone.",
+      "Yes. You can create a space, add family members, and start preserving memories for free.",
   },
   {
-    question: "Is it designed as a public social product?",
+    question: "Who can access my recipes?",
     answer:
-      "No. The concept is framed around private family spaces and controlled sharing, not public audience growth.",
+      "Only invited members of your family space. Recipes are private by default.",
   },
   {
-    question: "What does this investor page represent?",
+    question: "Can we cook along step-by-step?",
     answer:
-      "This is a standalone landing-page preview prepared for review without exposing the broader application codebase.",
+      "Yes. You can add chapters and guided playback so family can follow each step with confidence.",
+  },
+  {
+    question: "Can I add recipes without recording video?",
+    answer:
+      "Absolutely. You can add ingredients, notes, and stories even without video.",
   },
 ];
 
 export default function Faq() {
   return (
-    <section id="faq" className="landing-section border-t border-[var(--landing-border)] bg-white">
+    <section id="faq" className="landing-section border-t border-[var(--landing-border)] bg-[var(--background)]">
       <div className="mx-auto max-w-4xl px-4 sm:px-6">
         <h2 className="text-center font-serif text-[2rem] tracking-tight text-slate-900 sm:text-4xl lg:text-[3rem]">
           Frequently asked questions
@@ -32,9 +37,9 @@ export default function Faq() {
           {items.map((item) => (
             <details
               key={item.question}
-              className="group overflow-hidden rounded-2xl border border-slate-200 bg-white"
+              className="group overflow-hidden rounded-2xl border border-[var(--landing-border)] bg-[var(--landing-surface)]"
             >
-              <summary className="flex cursor-pointer items-center justify-between px-5 py-4 text-base font-medium text-slate-900 transition-colors hover:bg-slate-50 sm:text-lg">
+              <summary className="flex cursor-pointer items-center justify-between px-5 py-4 text-base font-medium text-slate-900 transition-colors hover:bg-[var(--background)] sm:text-lg">
                 <span>{item.question}</span>
                 <svg
                   className="h-5 w-5 text-slate-400 transition-transform group-open:rotate-180"

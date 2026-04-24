@@ -1,3 +1,5 @@
+import StoreBadges from './StoreBadges'
+
 export default function Hero() {
   return (
     <section className="landing-section pb-14 sm:pb-20 landing-mist overflow-hidden">
@@ -14,30 +16,25 @@ export default function Hero() {
           <p className="text-base sm:text-xl text-gray-600 mt-5 max-w-xl leading-relaxed">
             Capture the stories behind your favorite meals and keep them safe for the next generation.
           </p>
-          <div className="flex flex-wrap items-center gap-3 mt-8">
-            <button
-              type="button"
-              className="px-6 py-3 rounded-xl bg-[#FF2E7A] text-white font-semibold hover:bg-[#e3266d] transition-colors min-h-[48px] inline-flex items-center"
-            >
-              Start preserving today
-            </button>
-            <button
-              type="button"
-              className="px-6 py-3 rounded-xl border border-gray-200 bg-white text-gray-700 font-medium hover:bg-gray-50 transition-colors min-h-[48px] inline-flex items-center"
-            >
-              See how it works
-            </button>
+          <div className="mt-8">
+            <StoreBadges />
           </div>
+          <a
+            href="#how"
+            className="mt-6 inline-flex px-6 py-3 rounded-xl border border-[var(--landing-border)] bg-[var(--landing-surface)] text-gray-700 font-medium hover:bg-[var(--background)] transition-colors min-h-[48px] items-center"
+          >
+            See how it works
+          </a>
         </div>
 
         <div className="relative animate-fade-up-delay-2">
-          <div className="relative mx-auto max-w-[480px]">
+          <div className="relative mx-auto max-w-[480px] rounded-[2rem] border border-[var(--landing-border)] bg-[#F3E9DE] p-4 shadow-sm">
             <video
               autoPlay
               loop
               muted
               playsInline
-              className="w-full h-auto rounded-2xl"
+              className="w-full h-auto rounded-[1.4rem]"
               poster="/images/cookking_hero.png"
             >
               <source src="/images/cookkin-landing.mp4" type="video/mp4" />

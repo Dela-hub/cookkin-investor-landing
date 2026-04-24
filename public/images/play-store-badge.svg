@@ -1,0 +1,28 @@
+<svg width="336" height="112" viewBox="0 0 336 112" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="336" height="112" rx="22" fill="#111111"/>
+  <path d="M42 30.887c0-3.034 3.22-4.968 5.893-3.54l35.52 18.975c2.898 1.549 2.898 5.706 0 7.255L47.893 72.55C45.22 73.979 42 72.045 42 69.01V30.887Z" fill="url(#paint0_linear)"/>
+  <path d="M53.636 47.836 75.938 35.908 47.604 32.47 53.636 47.836Z" fill="url(#paint1_linear)"/>
+  <path d="M53.636 52.062 75.938 63.99 47.604 67.428 53.636 52.062Z" fill="url(#paint2_linear)"/>
+  <text fill="white" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="500" letter-spacing="0.02em">
+    <tspan x="112" y="42">GET IT ON</tspan>
+  </text>
+  <text fill="white" font-family="Arial, Helvetica, sans-serif" font-size="40" font-weight="700" letter-spacing="-0.02em">
+    <tspan x="112" y="80">Google Play</tspan>
+  </text>
+  <defs>
+    <linearGradient id="paint0_linear" x1="42" y1="50.948" x2="86.005" y2="50.948" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#00D2FF"/>
+      <stop offset="0.33" stop-color="#4FD96C"/>
+      <stop offset="0.66" stop-color="#FFD74A"/>
+      <stop offset="1" stop-color="#FF5A5F"/>
+    </linearGradient>
+    <linearGradient id="paint1_linear" x1="47.604" y1="40.153" x2="75.938" y2="40.153" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#00D2FF"/>
+      <stop offset="1" stop-color="#4FD96C"/>
+    </linearGradient>
+    <linearGradient id="paint2_linear" x1="47.604" y1="60.745" x2="75.938" y2="60.745" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFD74A"/>
+      <stop offset="1" stop-color="#FF5A5F"/>
+    </linearGradient>
+  </defs>
+</svg>

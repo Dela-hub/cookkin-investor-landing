@@ -2,6 +2,8 @@ import LandingNav from "@/components/landing/LandingNav";
 import Hero from "@/components/landing/Hero";
 import FeatureBand from "@/components/landing/FeatureBand";
 import Faq from "@/components/landing/Faq";
+import Image from "next/image";
+import StoreBadges from "@/components/landing/StoreBadges";
 
 export default function Home() {
   return (
@@ -15,8 +17,8 @@ export default function Home() {
             eyebrow="Capture"
             title="Record their voice, hands, and little details"
             description="From ingredient swaps to family sayings, preserve the parts that make a recipe feel like home."
-            ctaLabel="Capture a memory"
-            ctaHref="/signup"
+            ctaLabel="Download on the App Store"
+            ctaHref="https://apps.apple.com/my/app/cookkin/id6759157109"
             imageSrc="/images/cookking_hero.png"
             imageAlt="Family cooking memory in Cookkin"
           />
@@ -24,8 +26,8 @@ export default function Home() {
             eyebrow="Cook together"
             title="Guide every step with chapters and story context"
             description="Mark key moments, add notes, and help family cook with confidence even when you are not in the kitchen."
-            ctaLabel="Try guided mode"
-            ctaHref="/signup"
+            ctaLabel="Get it on Google Play"
+            ctaHref="https://play.google.com/store/apps/details?id=com.cookkin.app&hl=en_GB"
             imageSrc="/images/signup_signin.png"
             imageAlt="Cookkin guided flow on mobile"
             reverse
@@ -34,8 +36,8 @@ export default function Home() {
             eyebrow="Share gently"
             title="Keep memories close with private family spaces"
             description="Invite only the people who matter. No algorithm, no noise, just your family’s living food archive."
-            ctaLabel="Create your space"
-            ctaHref="/signup"
+            ctaLabel="Download on the App Store"
+            ctaHref="https://apps.apple.com/my/app/cookkin/id6759157109"
             imageSrc="/images/cookking_hero.png"
             imageAlt="Private family recipe space"
           />
@@ -71,9 +73,9 @@ export default function Home() {
               ].map((item) => (
                 <div
                   key={item.step}
-                  className="rounded-2xl bg-white border border-gray-200 p-6"
+                  className="rounded-2xl bg-[var(--landing-surface)] border border-[var(--landing-border)] p-6"
                 >
-                  <div className="w-9 h-9 rounded-xl border border-gray-200 text-[#FF2E7A] text-lg font-semibold flex items-center justify-center">
+                  <div className="w-9 h-9 rounded-xl border border-[var(--landing-border)] text-[#B04123] text-lg font-semibold flex items-center justify-center">
                     {item.step}
                   </div>
                   <h3 className="text-xl font-semibold text-gray-900 mt-4">{item.title}</h3>
@@ -115,7 +117,7 @@ export default function Home() {
               ].map((item) => (
                 <div
                   key={item.title}
-                  className="rounded-2xl bg-white border border-gray-200 p-6"
+                  className="rounded-2xl bg-[var(--background)] border border-[var(--landing-border)] p-6"
                 >
                   <h3 className="text-xl font-semibold text-gray-900">{item.title}</h3>
                   <p className="text-gray-600 text-sm mt-2 leading-relaxed">{item.desc}</p>
@@ -127,7 +129,7 @@ export default function Home() {
 
         <Faq />
 
-        <section className="landing-section border-t border-[var(--landing-border)] bg-white">
+        <section id="download" className="landing-section border-t border-[var(--landing-border)] bg-[var(--background)]">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center">
             <h2 className="font-serif text-[2rem] sm:text-4xl lg:text-[3rem] font-medium tracking-tight text-gray-900">
               Keep your family’s recipes alive
@@ -135,34 +137,27 @@ export default function Home() {
             <p className="text-base sm:text-lg text-gray-600 mt-4 max-w-2xl mx-auto">
               Start your private kitchen archive today and preserve the meals that shaped your home.
             </p>
-            <div className="flex flex-wrap justify-center gap-3 mt-8">
-              <button
-                type="button"
-                className="px-6 py-3 rounded-xl bg-[#FF2E7A] text-white font-semibold hover:bg-[#e3266d] transition-colors min-h-[48px] inline-flex items-center"
-              >
-                Start preserving
-              </button>
-              <button
-                type="button"
-                className="px-6 py-3 rounded-xl border border-gray-200 bg-white text-gray-700 font-medium hover:bg-gray-50 transition-colors min-h-[48px] inline-flex items-center"
-              >
-                Sign in
-              </button>
+            <div className="mt-8">
+              <StoreBadges />
             </div>
           </div>
         </section>
       </main>
 
-      <footer className="border-t border-[var(--landing-border)] py-8 bg-white">
+      <footer className="border-t border-[var(--landing-border)] py-8 bg-[var(--background)]">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-2">
-            <span className="inline-flex h-7 w-7 items-center justify-center rounded-lg bg-[#FF2E7A] text-white text-xs">🍳</span>
-            <span className="font-semibold text-sm">Cookkin</span>
+            <span className="inline-flex h-7 w-7 items-center justify-center overflow-hidden">
+              <Image
+                src="/images/potlogo.png"
+                alt="CookKin logo"
+                width={28}
+                height={28}
+                className="w-full h-full object-contain"
+              />
+            </span>
+            <span className="font-semibold text-sm text-[#381C08]">CookKin</span>
             <span className="hidden sm:inline text-sm text-gray-400 ml-1">Sharing memories, one recipe at a time.</span>
-          </div>
-          <div className="flex items-center gap-6 text-sm text-gray-500">
-            <button type="button" className="hover:text-gray-700 transition-colors">Sign In</button>
-            <button type="button" className="hover:text-gray-700 transition-colors">Sign Up</button>
           </div>
         </div>
       </footer>

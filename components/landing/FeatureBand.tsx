@@ -38,18 +38,20 @@ export default function FeatureBand({
           <p className="text-base sm:text-lg text-gray-600 mt-4 max-w-xl leading-relaxed">
             {description}
           </p>
-          <button
-            type="button"
+          <a
+            href={ctaHref}
+            target="_blank"
+            rel="noreferrer"
             data-cta={ctaHref}
-            className="inline-flex items-center mt-6 px-5 py-2.5 rounded-lg bg-[#FF2E7A] text-white font-semibold hover:bg-[#e3266d] transition-colors"
+            className="inline-flex items-center mt-6 px-5 py-2.5 rounded-lg bg-[#B04123] text-white font-semibold hover:bg-[#381C08] transition-colors"
           >
             {ctaLabel}
-          </button>
+          </a>
         </div>
 
         <div className="animate-fade-up-delay-1">
-          <div className="rounded-[2rem] border border-gray-200 bg-white p-4 shadow-sm">
-            <div className="rounded-[1.4rem] overflow-hidden bg-gray-100">
+          <div className="rounded-[2rem] border border-[var(--landing-border)] bg-[var(--landing-surface)] p-4 shadow-sm">
+            <div className="rounded-[1.4rem] overflow-hidden border border-[var(--landing-border)] bg-[var(--background)]">
               <Image
                 src={imageSrc}
                 alt={imageAlt}
