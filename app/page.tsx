@@ -159,6 +159,10 @@ export default function Home() {
             <span className="font-semibold text-sm text-[#381C08]">CookKin</span>
             <span className="hidden sm:inline text-sm text-gray-400 ml-1">Sharing memories, one recipe at a time.</span>
           </div>
+          <div className="flex items-center gap-5 text-sm text-gray-500">
+            <a href="/privacy-policy" className="hover:text-[#381C08] transition-colors">Privacy Policy</a>
+            <a href="/terms" className="hover:text-[#381C08] transition-colors">Terms &amp; Conditions</a>
+          </div>
         </div>
       </footer>
     </div>
